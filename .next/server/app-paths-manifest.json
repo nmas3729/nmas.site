@@ -1,0 +1,19 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/opengraph-image/route": "app-edge-has-no-entrypoint",
+  "/about/page": "app/about/page.js",
+  "/case-studies/opengraph-image/route": "app-edge-has-no-entrypoint",
+  "/case-studies/page": "app/case-studies/page.js",
+  "/contact/opengraph-image/route": "app-edge-has-no-entrypoint",
+  "/contact/page": "app/contact/page.js",
+  "/mining/opengraph-image/route": "app-edge-has-no-entrypoint",
+  "/mining/page": "app/mining/page.js",
+  "/opengraph-image/route": "app-edge-has-no-entrypoint",
+  "/page": "app/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/services/opengraph-image/route": "app-edge-has-no-entrypoint",
+  "/services/page": "app/services/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/webcraft/page": "app/webcraft/page.js"
+}

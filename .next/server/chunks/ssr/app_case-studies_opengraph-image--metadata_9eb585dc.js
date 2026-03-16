@@ -1,0 +1,3 @@
+module.exports=[10845,a=>{"use strict";a.i(7997),a.i(99475);var b=a.i(52425);let c={alt:"NMAS Case Studies – Real Results for Real Clients",contentType:"image/png",runtime:"edge",size:{width:1200,height:630}};async function d(a){let{__metadata_id__:d,...e}=await a.params,f=(0,b.fillMetadataSegment)("/case-studies",e,"opengraph-image");return[function(a,b){let c={alt:a.alt,type:a.contentType||"image/png",url:f+"?26bdc95764d8fb95"},{size:d}=a;return d&&(c.width=d.width,c.height=d.height),c}(c,0)]}a.s(["default",0,d],10845)}];
+
+//# sourceMappingURL=app_case-studies_opengraph-image--metadata_9eb585dc.js.map

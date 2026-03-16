@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "functions": {
+    "/about/opengraph-image": {},
+    "/case-studies/opengraph-image": {},
+    "/contact/opengraph-image": {},
+    "/mining/opengraph-image": {},
+    "/opengraph-image": {},
+    "/services/opengraph-image": {}
+  }
+}

@@ -1,0 +1,256 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ── NMAS Brand Colors ─────────────────────────────────────── */
+  --nmas-navy:    #0A1A2F;  /* Deep Navy  – headers, footer, primary buttons */
+  --nmas-cyan:    #00CCFF;  /* Bright Cyan – accents, icons, highlights     */
+  --nmas-ice:     #E0F7FF;  /* Light Ice  – alternating section backgrounds */
+  --nmas-blue:    #0099CC;  /* Medium Blue – links, hover states            */
+  --nmas-charcoal:#333333;  /* Body text                                    */
+
+  /* ── Shadcn / Tailwind semantic tokens (mapped to brand) ──── */
+  --background:         oklch(1 0 0);           /* #FFFFFF */
+  --foreground:         oklch(0.20 0.02 260);   /* #333333 charcoal */
+  --card:               oklch(1 0 0);
+  --card-foreground:    oklch(0.20 0.02 260);
+  --popover:            oklch(1 0 0);
+  --popover-foreground: oklch(0.20 0.02 260);
+  --primary:            oklch(0.17 0.06 243);   /* Deep Navy #0A1A2F */
+  --primary-foreground: oklch(1 0 0);
+  --secondary:          oklch(0.94 0.04 214);   /* Light Ice #E0F7FF */
+  --secondary-foreground:oklch(0.17 0.06 243);
+  --muted:              oklch(0.94 0.04 214);
+  --muted-foreground:   oklch(0.45 0.03 240);
+  --accent:             oklch(0.79 0.14 220);   /* Bright Cyan #00CCFF */
+  --accent-foreground:  oklch(0.17 0.06 243);
+  --destructive:        oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border:             oklch(0.88 0.03 214);
+  --input:              oklch(0.88 0.03 214);
+  --ring:               oklch(0.79 0.14 220);
+  --radius:             0.5rem;
+
+  /* Sidebar tokens */
+  --sidebar:                    oklch(0.17 0.06 243);
+  --sidebar-foreground:         oklch(1 0 0);
+  --sidebar-primary:            oklch(0.79 0.14 220);
+  --sidebar-primary-foreground: oklch(0.17 0.06 243);
+  --sidebar-accent:             oklch(0.94 0.04 214);
+  --sidebar-accent-foreground:  oklch(0.17 0.06 243);
+  --sidebar-border:             oklch(0.25 0.04 243);
+  --sidebar-ring:               oklch(0.79 0.14 220);
+}
+
+.dark {
+  --background:         oklch(0.12 0.04 243);
+  --foreground:         oklch(0.94 0.01 0);
+  --card:               oklch(0.16 0.04 243);
+  --card-foreground:    oklch(0.94 0.01 0);
+  --popover:            oklch(0.16 0.04 243);
+  --popover-foreground: oklch(0.94 0.01 0);
+  --primary:            oklch(0.79 0.14 220);
+  --primary-foreground: oklch(0.12 0.04 243);
+  --secondary:          oklch(0.22 0.04 243);
+  --secondary-foreground:oklch(0.94 0.01 0);
+  --muted:              oklch(0.22 0.04 243);
+  --muted-foreground:   oklch(0.65 0.02 240);
+  --accent:             oklch(0.79 0.14 220);
+  --accent-foreground:  oklch(0.12 0.04 243);
+  --destructive:        oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.94 0.01 0);
+  --border:             oklch(0.25 0.04 243);
+  --input:              oklch(0.25 0.04 243);
+  --ring:               oklch(0.79 0.14 220);
+  --sidebar:            oklch(0.16 0.04 243);
+  --sidebar-foreground: oklch(0.94 0.01 0);
+  --sidebar-primary:    oklch(0.79 0.14 220);
+  --sidebar-primary-foreground: oklch(0.12 0.04 243);
+  --sidebar-accent:     oklch(0.22 0.04 243);
+  --sidebar-accent-foreground:  oklch(0.94 0.01 0);
+  --sidebar-border:     oklch(0.25 0.04 243);
+  --sidebar-ring:       oklch(0.79 0.14 220);
+}
+
+@theme inline {
+  --font-sans:  "Inter", "sans-serif";
+  --font-mono:  "Geist Mono", "Geist Mono Fallback";
+
+  /* NMAS brand color utilities */
+  --color-nmas-navy:    var(--nmas-navy);
+  --color-nmas-cyan:    var(--nmas-cyan);
+  --color-nmas-ice:     var(--nmas-ice);
+  --color-nmas-blue:    var(--nmas-blue);
+  --color-nmas-charcoal:var(--nmas-charcoal);
+
+  /* Semantic tokens */
+  --color-background:                var(--background);
+  --color-foreground:                var(--foreground);
+  --color-card:                      var(--card);
+  --color-card-foreground:           var(--card-foreground);
+  --color-popover:                   var(--popover);
+  --color-popover-foreground:        var(--popover-foreground);
+  --color-primary:                   var(--primary);
+  --color-primary-foreground:        var(--primary-foreground);
+  --color-secondary:                 var(--secondary);
+  --color-secondary-foreground:      var(--secondary-foreground);
+  --color-muted:                     var(--muted);
+  --color-muted-foreground:          var(--muted-foreground);
+  --color-accent:                    var(--accent);
+  --color-accent-foreground:         var(--accent-foreground);
+  --color-destructive:               var(--destructive);
+  --color-destructive-foreground:    var(--destructive-foreground);
+  --color-border:                    var(--border);
+  --color-input:                     var(--input);
+  --color-ring:                      var(--ring);
+  --radius-sm:  calc(var(--radius) - 4px);
+  --radius-md:  calc(var(--radius) - 2px);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) + 4px);
+  --color-sidebar:                   var(--sidebar);
+  --color-sidebar-foreground:        var(--sidebar-foreground);
+  --color-sidebar-primary:           var(--sidebar-primary);
+  --color-sidebar-primary-foreground:var(--sidebar-primary-foreground);
+  --color-sidebar-accent:            var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border:            var(--sidebar-border);
+  --color-sidebar-ring:              var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    /* Adjust for sticky header */
+    scroll-margin-top: 5rem;
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-balance;
+  }
+  
+  /* ── Accessible Focus Rings ───────────────────────────────── */
+  :focus-visible {
+    outline: 2px solid var(--nmas-cyan);
+    outline-offset: 2px;
+  }
+
+  /* ── Reduced Motion Support ───────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ── Topographic pattern overlay (SVG data URI for hero bg) ─── */
+.topo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='90' fill='none' stroke='rgba(0,204,255,0.04)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='rgba(0,204,255,0.04)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='rgba(0,204,255,0.04)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='rgba(0,204,255,0.04)' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Grid dot pattern for section backgrounds ─────────────── */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(0,204,255,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Glow button effect ────────────────────────────────────── */
+.glow-button {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.glow-button:hover {
+  box-shadow: 0 0 24px rgba(0, 204, 255, 0.5);
+  transform: translateY(-1px);
+}
+.glow-button::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+  pointer-events: none;
+}
+.glow-button:hover::after { transform: scale(1); }
+
+/* ── Testimonials infinite marquee ─────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+.animate-marquee:hover { animation-play-state: paused; }
+
+/* ── Subtle card lift ──────────────────────────────────────── */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10,26,47,0.12);
+}
+
+/* ── Gradient text utility ─────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #00CCFF 0%, #0099CC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Animated underline ────────────────────────────────────── */
+.animated-underline {
+  position: relative;
+}
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: #00CCFF;
+  transition: width 0.3s ease;
+}
+.animated-underline:hover::after { width: 100%; }
+
+/* ── reCAPTCHA badge ────────────────────────────────────────── */
+.grecaptcha-badge {
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 9999;
+  bottom: 15px !important;
+  right: 15px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* ── Skip-to-content accessibility ─────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -40px; left: 0;
+  background: #00CCFF;
+  color: #0A1A2F;
+  padding: 8px 16px;
+  z-index: 9999;
+  font-weight: 700;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
