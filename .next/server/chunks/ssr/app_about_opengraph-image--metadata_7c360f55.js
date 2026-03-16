@@ -1,3 +1,0 @@
-module.exports=[9337,a=>{"use strict";a.i(7997),a.i(99475);var b=a.i(52425);let c={alt:"About NMAS Innovations – Founded 2015, South Africa",contentType:"image/png",runtime:"edge",size:{width:1200,height:630}};async function d(a){let{__metadata_id__:d,...e}=await a.params,f=(0,b.fillMetadataSegment)("/about",e,"opengraph-image");return[function(a,b){let c={alt:a.alt,type:a.contentType||"image/png",url:f+"?385e213982a9ed15"},{size:d}=a;return d&&(c.width=d.width,c.height=d.height),c}(c,0)]}a.s(["default",0,d],9337)}];
-
-//# sourceMappingURL=app_about_opengraph-image--metadata_7c360f55.js.map
